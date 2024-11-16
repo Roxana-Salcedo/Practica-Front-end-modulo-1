@@ -13,9 +13,68 @@
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Sobre mi</a></li>
                 <li><a href="#">Articulos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <section id="Contacto">
+          <h2>Formulario de contacto</h2>
+          <p>Rellena el formulario para enviarme tus comentarios o preguntas</p>
+          <!--Formulario de contacto-->
+         <form>
+            <!--Label es una etiqueta que nos sirve para asociar un texto descriptivo a un elemento de entrada o input
+            El atribitp for de label ayuda a vincularlo con un elemneto de formulario especifico ya que el atributo for contiene el valor del id del campo de entrada con el cual se acocia-->
+            <label for="">Nombre</label>
+            <!--type ayuda a dar contexto sobre el tipo de dato que se va a estar recibiendo-->
+            <input type="text" id="Nombre" placeholder="Escribe tu nombre" required>
+
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" placeholder=" ejemplo@correo.com" required>
+
+            <label for="Asunto">Asunto</label>
+            <select id="Asunto" required>
+                <option>Consulta</option>
+                <option>Sugerencia</option>
+                <option>Queja</option>
+                <option>Otro</option>
+            </select>
+
+            <label for="mensaje"></label>
+            <textarea id="mensaje" rows="1" placeholder="Escribe el asunto" required></textarea>
+
+            <!--fieldset nos sirve para agrupar elementos de un formulario relacionado. Facilita la comprension y navegación en el formulario, especialmente para los usuarios de lectores de pantalla-->
+            <fieldset>
+                <!--legent nos ayuda a proporcionar un titulo a mi grupo de información almacenado en fieldset-->
+                <legend> Genero</legend>
+                <!--Cada boton de radio tiene el mismo "name" para permitir solo una opcion en este grupo-->
+                <label for="genero-masculino">Masculino</label>
+                <input type="radio" name="genero" id="genero-masculinoasculino">
+                <label for="genero-femenino">Femenino</label>
+                <input type="radio" name="genero" id="genero-femeninoemenino">
+            </fieldset>
+
+            <fieldset>
+               <legend>Intereses</legend>
+               <label for="Intereses-cocinar">cocinar</label>
+               <!--Con checkbox se pueden seleccionar  varios-->
+               <input type="checkbox" name="cocinar" id="Intereses-cocinar">
+
+               <label for="Intereses-meditar">meditar</label>
+               <input type="checkbox" name="meditar" id="Intereses-meditar">
+
+               <label for="Intereses-cocinar">senderismo</label>
+               <input type="checkbox" name="senderismo" id="Intereses-senderismo">
+
+               <label for="Intereses-escribir">escribir</label>
+               <input type="checkbox" name="escribir" id="Intereses-escribir">
+            </fieldset>
+
+            <!--con summit se envia el formulario, solo hay uno por formulario-->
+            <button type="submit">Enviar</button>
+         </form>
+        </section>
+    </main>
+
 </body>
 </html>
